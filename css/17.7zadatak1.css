@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.zaglavlje {
+  background-color: grey;
+  font-size: larger;
+  height: 10vh;
+  width: auto;
+  padding: 1em;
+}
+.podnožje {
+  background-color: grey;
+  font-size: larger;
+  height: 10vh;
+  width: auto;
+  padding: 1em;
+}
+
+.main {
+  
+  background: white;
+  
+  border: 1px solid black;
+  margin: 0.2em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 65%;
+}
+.section {
+  background: #eee;
+
+  width: 70vw;
+
+  height: 600px;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.aside {
+  background: #eee;
+display: flex;
+flex-wrap: wrap;
+  padding: 1em;
+  margin: 0.2em;
+  
+}
+.flex-item {
+  flex-basis: 22%;
+  padding: 0.5em;
+  width: 46%;
+  text-align: center;
+  border: 1px solid black;
+}

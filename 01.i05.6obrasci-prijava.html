@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci-forme</title>
+</head>
+<body>
+
+<form action="https://jsonplaceholder.typicode.com/posts" method="get" enctype="multipart/form-data" id="registracija">
+<label for="firstname">Ime:</label>
+<input type="text" name="firstname" id="firstname" value="Josip" size="15"/>
+<br/> <br> 
+
+<label for="lastname">Prezime:</label>
+<input type="text" name="lastname" id="lastname" size="20" placeholder="unesite prezime" autofocus /><br/>    
+<br>
+
+<label for="pass">Lozinka:</label>
+<input type="password" name="pass" id="pass" maxlength="8" size="10" placeholder="upišite zaporku"/>  
+<br><br>
+
+<label for="mail">Unesite adresu e-pošte:</label><br>
+<input type="email" name="email" id="mail" /><br><br>
+
+
+<label for="boja">Odaberite boju:</label>
+<input type="color" name="boja" id="boja" /><br><br>
+
+<label for="Datum">Odabir datuma:</label>
+<input type="date" name="datum" id="datum" min="1999-12-31" max="2023-06-05" /><br><br>
+<br>
+<label for="datoteka">Odaberite datoteku:</label>
+<input type="file" name="datoteka" id="datoteka" /><br>
+<br>
+<label for="datoteka">Koji ti je najbliži grad?:</label>
+<select name="grad" id="grad" form="registracija">
+    <option value="Zagreb">Zagreb</option>
+    <option value="Osijek">Osijek</option>
+    <option value="Split">Split</option>
+    <option value="Rijeka">Rijeka</option>
+  </select><br>
+  <br>
+  <label for="browser">Odabir preglednika:</label>
+<input list="browsers" name="browser" id="browser">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<p>
+<input type="reset" value="Obriši podatke">
+<input type="submit" value="Pošalji">
+</p>
+</form>
+    
+</body>
+</html>

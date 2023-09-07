@@ -1,0 +1,39 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    border: 1px solid black;
+    width: 300px;
+    height: 150px;
+    background-color: #f93;
+    margin: 4em auto;
+}
+.translate {
+    transform: translate(150px, -20px);
+/*transform: translate();kombinacija transform x 
+ i transform y u jednom, sa zarezom */
+}
+
+.rotate {
+    transform: rotate(-30deg);
+}
+.skew {
+    transform: skew(20deg, 15deg);
+}
+.scale {
+    transform: scale(1.5, 0.3);
+}
+.multiple {
+    transform: rotate(30deg) skew(35deg, 25deg) scale(0.4)
+}
+.matrix {
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+    /* The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+}

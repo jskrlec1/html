@@ -1,0 +1,22 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 16px;
+color: black;
+background: 
+url(../slike/pattern.png) repeat,
+url(../slike/fire.png)  center 355px/15% no-repeat  ,
+url(../slike/blossom.jpg) center center/cover no-repeat ;
+background-color: #ddd;
+background-attachment: fixed;
+}
+
+h1 {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+p {
+    color: white;
+    text-align: justify;
+
+}

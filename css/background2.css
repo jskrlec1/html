@@ -1,0 +1,11 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 16px;
+color: black;
+background-color: #ddd;
+background-image: url(../slike/butterfly.png);
+background-repeat: no-repeat;
+background-position: 100px 200px;
+background-attachment: scroll;
+background-size: 20%;
+}

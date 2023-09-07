@@ -1,0 +1,54 @@
+$boja1: #eee;
+$boja2: #333;
+$boja3: #800;
+$font1: Tahoma, sans-serif;
+$font2: Courier, monospace;
+
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+//mixin - argument s više vrijednosti
+@mixin margin-mix($margin...) {
+  margin: $margin;
+}
+
+//mixin - argument sa zadanom vrijednosti
+@mixin border-radius($r: 20px) {
+  border-radius: $r;
+}
+@mixin has-content {
+  section {
+    @content;
+    //primjeni oblikovanje samo unutar section selektora
+  }
+}
+@include has-content() {
+  .odlomak {
+    border: 8px dotted $boja3;
+  }
+}
+
+header,
+footer,
+section,
+article {
+  border: 2px solid $boja2;
+  padding: 1em;
+}
+
+section {
+  article {
+    @include border-radius();
+    @include margin-mix(1em);
+    &:last-child {
+      @include border-radius(0 30px);
+    }
+  }
+}
+
+footer {
+  @include margin-mix(1em 0 2em 5em);
+}

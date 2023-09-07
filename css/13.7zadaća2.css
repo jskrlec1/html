@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+}
+.wrapper {
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px dashed #666;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-basis: 100;
+
+  
+}
+
+
+.wrapper .flex-item {
+  background: #eee;
+  border: 1px solid #666;
+  text-align: center;
+  width: 23%;
+  height: 20em;
+  margin: 8px;
+   
+}

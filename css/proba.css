@@ -1,0 +1,21 @@
+.container {
+  background-image: url("https://img.freepik.com/premium-photo/curtains-stage-theater-3d-rendering-modern-illustration-computer-generated-backdrop_828631-6453.jpg?w=2000");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px; /* Prilagodite širinu prema svojim potrebama */
+  margin: 0 auto;
+}
+
+.text {
+  font-family: Arial, sans-serif;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

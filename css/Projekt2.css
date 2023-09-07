@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: transparent;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbkeHf55qPM6fi0jemsnjk5rqYqFuSQIeau8zwOiqB47YZtJ-1U_9fmD7UunTvPKA2aQ&usqp=CAU");
+}
+
+.navigacija {
+  list-style: none;
+  font-family: fantasy, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+}
+nav ul li a {
+  color: rgb(255, 3, 251);
+  font-size: large;
+}
+.navigacija ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigacija li {
+  margin-left: 10px;
+}
+
+.navigacija li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #000;
+}
+
+.navigacija li a:hover {
+  background-color: #080808;
+  color: #0ae919;
+}
+.container {
+  border: 4px solid #666;
+  width: 100em;
+  height: 200em;
+  margin: 0 auto;
+  margin-top: 5em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.box1 {
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  margin-top: 0;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: "Monoton";
+  font-size: 8em;
+  text-shadow: #3f3d3e 30px -25px 6px;
+  position: static;
+}
+
+.box2 {
+  background-color: chartreuse;
+  width: 100%;
+  height: 50em;
+  background: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/2541/production/_110073590_mariefredriksson_pergessle_gettty1990getty.jpg.webp")
+    center center/cover no-repeat;
+  border: 4px red solid;
+}
+.box3 {
+  background-color: cyan;
+  position: absolute;
+  right: 0;
+  bottom: 20;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  font-size: x-large;
+  text-shadow: #666 5px 5px 5px;
+}
+.box4 {
+  background-color: brown;
+  position: absolute;
+  right: 0;
+  top: 44%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  font-size: x-large;
+  text-shadow: #666 5px 5px 5px;
+}
+.box5 {
+  background-color: brown;
+  position: absolute;
+  left: 50%;
+  top: 250%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: oblique;
+  font-size: x-large;
+  text-shadow: #666 5px 5px 5px;
+  
+}
+

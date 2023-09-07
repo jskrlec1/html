@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.div1 {
+    background-color: #eee;
+    
+    width: 300px;
+    border: 6px solid gray;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: justify;
+   
+   }
+  
+  .div2 {
+    background-color: #eee;
+    border: 6px dashed grey;
+    text-align: justify;
+    padding: 20px 40px;
+    width: 40%;
+    margin-left: auto;
+  }
+  
+  .div3 {
+    background-color: #eee;
+    border-right: 6px double grey;
+    text-align: justify;
+    width: 40%;
+    height: 40%;
+    padding: 0px 5px 10px 20px;
+  
+  
+  }
+  .div4 {
+    background-color: #eee;
+    text-align: justify;
+    border-top: 4px dashed grey;
+    border-bottom: 4px dotted;
+    margin: 20px auto;
+  }
+

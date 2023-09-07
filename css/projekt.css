@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: transparent;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbkeHf55qPM6fi0jemsnjk5rqYqFuSQIeau8zwOiqB47YZtJ-1U_9fmD7UunTvPKA2aQ&usqp=CAU");
+  background-attachment: fixed;
+  animation: valovi 40s linear infinite;
+}
+
+@keyframes valovi {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.wrapper div {
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.flex-item1 {
+  transition: transform 2s;
+}
+.flex-item1:hover {
+  transform: rotate(360deg);
+}
+h2 {
+  transition: width 3s;
+}
+h2:hover {
+  width: 1000px;
+}
+
+.navigacija {
+  list-style: none;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav ul li a {
+  background-color: #87afb7;
+  color: rgb(165, 76, 8);
+  font-size: large;
+}
+.navigacija ul {
+  padding: 0;
+  margin: 0;
+}
+
+.navigacija li {
+  margin-left: 10px;
+}
+
+.navigacija li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #000;
+}
+
+.navigacija li a:hover {
+  background-color: #080808;
+  color: #0ae919;
+}
+h2 {
+  color: rgb(203, 20, 20);
+  text-decoration: underline solid rgb(219, 90, 90) 3px;
+  text-shadow: 15px -12px 5px rgb(241, 228, 83);
+}
+p {
+  color: blueviolet;
+}
+.flex-item1 {
+  color: red;
+  justify-items: center;
+  font-family: "Monoton";
+  font-size: 5em;
+  text-shadow: #3f3d3e 30px -25px 6px;
+}
+.flex-item2 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  border: solid 2px red;
+  border-radius: 5em;
+  text-align: justify;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  background: #75a678;
+  opacity: 0.8;
+  transform: rotate(2deg);
+}
+.nestajanje {
+  animation: nestajanje 5s ease-in-out infinite;
+}
+
+@keyframes nestajanje {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.flex-item3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  border: solid 2px red;
+  border-radius: 5em;
+  background: #75a678;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  opacity: 0.9;
+  
+  
+}
+
+.flex-item4 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  border: solid 2px red;
+  border-radius: 5em;
+  background: #75a678;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  opacity: 0.8;
+  transform: rotate(-2deg);
+}
+.flex-item5 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  border: solid 2px red;
+  border-radius: 5em;
+  background: #75a678;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  opacity: 0.8;
+  
+}
+.flex-item6 {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  border: solid 2px red;
+  border-radius: 5em;
+  background: #75a678;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  opacity: 0.8;
+  transform: rotate(2deg);
+}
+.img {
+  float: right;
+}
+
+.flex-item7 {
+  display: flex;
+  background: url("https://www.woodstock-shop.com/data/catalog/3638994/3638994_2.jpg")
+    center center/cover no-repeat;
+
+  width: 100%;
+  height: auto;
+  border-radius: 5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5em;
+  opacity: 0.8;
+  animation: animacija 5s linear;
+}
+@keyframes animacija {
+  0% {
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    transform: scale(2.5) rotateX(-180deg);
+  }
+  100% {
+    transform: scale(1) rotateX(-360deg);
+  }
+}

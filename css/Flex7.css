@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+}
+
+.wrapper {
+  border: 1px dashed #666;
+  padding: 1em;
+  height: 100vh;
+  
+}
+
+.wrapper div {
+  background: #eee;
+  border: 1px solid #666;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  width: 20vw;
+}
+
+.flex-container {
+  display: flex;
+}
+/* .flex-item:nth-child(3) {
+    order: -1;
+    } ako želim pomaknuti jedan element ispred
+    ostalih koristim -1,,,
+    ako želim ručno posložiti elemente, dohvatim
+    svaki element i postavim mu order svojstvo*/
+.flex-item:nth-child(1) {
+  order: 4;
+}
+.flex-item:nth-child(2) {
+  order: 3;
+}
+.flex-item:nth-child(3) {
+  order: 1;
+}
+.flex-item:nth-child(4) {
+  order: 5;
+}
+.flex-item:nth-child(5) {
+  order: 2;
+}

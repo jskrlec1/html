@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: transparent;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDbkeHf55qPM6fi0jemsnjk5rqYqFuSQIeau8zwOiqB47YZtJ-1U_9fmD7UunTvPKA2aQ&usqp=CAU");
+  background-attachment: fixed;
+}
+
+header {
+  background: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/2541/production/_110073590_mariefredriksson_pergessle_gettty1990getty.jpg.webp")
+    center center/cover no-repeat;
+  background-size: cover;
+  background-position: center right top;
+  padding: 10em;
+  border: 4px red solid;
+  max-width: 120em;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigacija {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2em;
+  margin-right: 2em;
+}
+
+.navigacija li {
+  margin-left: 10px;
+}
+
+.navigacija li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  color: rgb(244, 220, 7);
+  font-size: large;
+}
+
+.navigacija li a:hover {
+  background-color: #080808;
+  color: #0ae919;
+}
+
+h2 {
+  color: #dc0e0e;
+  font-family: fantasy;
+  font-size: xx-large;
+  text-shadow: 12px 12px 10px rgb(172, 43, 43);
+  text-decoration: underline 4px rgb(16, 15, 15);
+  margin: 0;
+  padding: 1em;
+}
+
+a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+section {
+  max-width: 120em;
+  margin: 0 auto;
+}
+
+p {
+  font-family: fantasy;
+  text-align: justify;
+}
+
+.box0 {
+  height: 100px;
+  margin-top: 0;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: "Monoton";
+  font-size: 12em;
+  text-shadow: #3f3d3e 30px -25px 6px;
+  opacity: 0.3;
+}
+
+.box1 {
+  background-color: rgb(240, 235, 235);
+  color: #4f0edc;
+}
+
+.box2 {
+  background-color: rgb(39, 11, 221);
+  opacity: 0.7;
+}
+
+.foto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.foto img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 10px;
+}
+
+#popisalbuma {
+  color: #2d3733;
+}
+
+#p1 {
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline 1px blue;
+}
+
+#p2 {
+  font-size: larger;
+  font-style: italic;
+  text-align: justify;
+  text-rendering: optimizeLegibility;
+}
+
+footer {
+  text-align: center;
+  font-size: 2em;
+}

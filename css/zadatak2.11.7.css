@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+  body {
+   
+color: black;
+background-color: #f7f5f5;
+margin: 0;
+
+}
+
+img {
+    display: block;
+    margin: 1em auto;
+    border: 2px solid black;
+    padding: 4em;
+    width: 25%;
+}

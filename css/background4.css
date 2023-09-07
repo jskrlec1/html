@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color: #ddd;
+    background-image: url(../slike/butterfly.png),
+    url(../slike/coffee-cup.png);
+    background-repeat: no-repeat, repeat-x;
+    /* background-position: center center; */
+    /* background-position: position-x position-y; */
+    background-position: 100px 200px, right top;
+    background-attachment: scroll, fixed;
+    background-size: 25%, 15%;
+  }
+  

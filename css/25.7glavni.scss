@@ -1,0 +1,60 @@
+@import "25.7svifontovi.scss";
+@import "25.7svebojevarijable.scss";
+@import "25.7svimixini.scss";
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: $color5;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+body,
+ul {
+  margin: 0%;
+  padding: 0;
+}
+
+body {
+  color: $color4;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.menu {
+  margin: 1em;
+  padding: 1em;
+  background: $color3;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline;
+}
+
+a {
+  margin: 0;
+  padding: 5px 2em;
+  color: rgba(9, 37, 193, 0.75);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:visited {
+  color: rgba(185, 235, 4, 0.75);
+}
+a:hover {
+  color: #970be9;
+}
+a:active {
+  color: red;
+}
+p {
+  color: $color4;
+  font-family: $mono;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<form action="https://jsonplaceholder.typicode.com/posts" method="get" enctype="multipart/form-data" id="registracija">
+    <label for="firstname">Ime i prezime*:</label><br>
+    <input type="text" name="firstname" id="firstname" value="" size="15"/>
+    <br/><br>
+    <label for="mail">E-mail adresa*:</label><br>
+<input type="email" name="email" id="mail" /><br><br>
+
+<label for="telefon">Kontakt broj telefona</label><br>
+<input type="tel" name="telefon" id="telefon" /><br>
+<br>
+<label for="Datum">Datum rođenja:</label><br>
+<input type="date" name="datum" id="datum" min="1930-12-31" max="2023-06-05" /><br>
+<br>
+ 
+<p1>Koje jezike govorite?</p1><br>
+
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="jezik1" value="jezik">
+  <label for="jezik"> Engleski</label>
+  <input type="checkbox" id="vehicle2" name="jezik2" value="jezik">
+  <label for="vehicle2"> Talijanski</label>
+  <input type="checkbox" id="vehicle3" name="jezik3" value="jezik">
+  <label for="vehicle3"> Njemački</label>
+  <input type="checkbox" id="vehicle1" name="jezik4" value="jezik">
+  <label for="vehicle1"> Francuski</label>
+  <input type="checkbox" id="vehicle2" name="jezik5" value="jezik">
+  <label for="vehicle2"> Španjolski</label><br>
+  <br>
+  <p1>Da li ste do sada koristili usluge naše tvrtke?</p1><br>
+  <form action="/action_page.php">
+    <input type="radio" id="jezik" name="jezik" value="Da">
+    <label for="Da"> Da</label>
+    <input type="radio" id="jezik1" name="jezik" value="Ne">
+    <label for="Ne"> Ne</label>
+  <br><br>
+  <label for="datoteka">Priložite životopis</label><br>
+<input type="file" name="datoteka" id="datoteka" /><br><br>
+
+<input type="reset" value="Poništi">
+<input type="submit" value="Prijavi se">
+</form>
+
+   
+</body>
+</html>

@@ -1,0 +1,57 @@
+$red: #833;
+$pozadinaArticle: #eee;
+
+body {
+  color: $red;
+}
+
+header {
+  text-align: center;
+  p {
+    font-size: 18px;
+  }
+  h1 {
+    color: aqua;
+  }
+  a {
+    color: chocolate;
+  }
+}
+
+section {
+  h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  p {
+    text-align: justify;
+  }
+  a {
+    color: $red;
+  }
+
+  article {
+    background-color: $red;
+    p {
+      color: $pozadinaArticle;
+    }
+    a {
+      color: $pozadinaArticle;
+    }
+  }
+}
+footer {
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(19, 9, 213);
+  }
+  p {
+    text-align: justify;
+  }
+  a {
+    color: greenyellow;
+  }
+}
+
+// DZ: Oblikovati elemente Footera na isti način
+
+// DZ oblikovati footer na isti način?
