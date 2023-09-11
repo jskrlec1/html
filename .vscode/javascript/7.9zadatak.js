@@ -6,52 +6,47 @@
 // 4. Pretvori svoj objekt u JSON string.
 // Kreiranje objekta koji predstavlja auto
 
-
 // 1. Kreiranje objekta za auto
 var auto = {
-    marka: "Toyota",
-    model: "Camry",
-    godinaProizvodnje: 2022,
-    trenutnaBrzina: 0,
-  
-    ubrzaj: function(ubrzanje) {
-      this.trenutnaBrzina += ubrzanje;
-      return this.trenutnaBrzina;
-    },
-  
-    zakoci: function(smanjenje) {
-      this.trenutnaBrzina -= smanjenje;
-      return this.trenutnaBrzina;
-    },
-  
-    informacije: {
-      boja: "Siva",
-      brojVrata: 4
-    }
-  };
-  
-  // 2. Pozivanje funkcija na objektu
-  var novaBrzina = auto.ubrzaj(50);
-  console.log("Nova brzina automobila: " + novaBrzina);
-  
-  var smanjenaBrzina = auto.zakoci(20);
-  console.log("Smanjena brzina automobila: " + smanjenaBrzina);
-  
-  // 3. Prolazak kroz svojstva objekta i ispis u konzoli
-  for (var svojstvo in auto) {
-    if (auto.hasOwnProperty(svojstvo)) {
-      console.log(svojstvo + ": " + auto[svojstvo]);
-    }
+  marka: "Toyota",
+  model: "Camry",
+  godinaProizvodnje: 2022,
+  trenutnaBrzina: 0,
+
+  ubrzaj: function (ubrzanje) {
+    this.trenutnaBrzina += ubrzanje;
+    return this.trenutnaBrzina;
+  },
+
+  zakoci: function (smanjenje) {
+    this.trenutnaBrzina -= smanjenje;
+    return this.trenutnaBrzina;
+  },
+
+  informacije: {
+    boja: "Siva",
+    brojVrata: 4,
+  },
+};
+
+var novaBrzina = auto.ubrzaj(50);
+console.log("Nova brzina automobila: " + novaBrzina);
+
+var smanjenaBrzina = auto.zakoci(20);
+console.log("Smanjena brzina automobila: " + smanjenaBrzina);
+
+for (var svojstvo in auto) {
+  if (auto.hasOwnProperty(svojstvo)) {
+    console.log(svojstvo + ": " + auto[svojstvo]);
   }
-  
-  // 4. Ispisivanje razumljive rečenice
-  console.log(
-    "Auto marke " +
-      auto.marka +
-      " i modela " +
-      auto.model +
-      " je proizveden " +
-      auto.godinaProizvodnje +
-      "."
-  );
-  
+}
+
+console.log(
+  "Auto marke " +
+    auto.marka +
+    " i modela " +
+    auto.model +
+    " je proizveden " +
+    auto.godinaProizvodnje +
+    "."
+);
