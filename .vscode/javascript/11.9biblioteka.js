@@ -1,5 +1,7 @@
 //dokumentacija: https:lodash.com/docs/4.17.15#upperCase
-var _ = require("lodash");  //način za pokretanje lodasha
+var _ = require("lodash"); /*način za pokretanje lodasha,
+koristi se unutar Nodea - VS Coda,
+ ne treba za preglednik*/
 
 var rijec = " tekst s razmakom    ";
 
