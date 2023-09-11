@@ -6,7 +6,7 @@
 // 4. Pretvori svoj objekt u JSON string.
 // Kreiranje objekta koji predstavlja auto
 
-// 1. Kreiranje objekta za auto
+
 var auto = {
   marka: "Toyota",
   model: "Camry",
@@ -50,3 +50,5 @@ console.log(
     auto.godinaProizvodnje +
     "."
 );
+var autoJSON = JSON.stringify(auto);
+console.log(autoJSON);
