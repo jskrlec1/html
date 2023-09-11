@@ -23,6 +23,7 @@ console.log(igracka);
 
 cat.color = "grey";
 cat.size = 30;
+
 console.log(cat);
 
 delete dog.bark;
@@ -31,3 +32,4 @@ var ispisObjekta = JSON.stringify(dog);
 //pretvaranje u JSON objekt
 console.log();
 console.log(ispisObjekta);
+

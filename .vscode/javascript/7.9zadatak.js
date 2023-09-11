@@ -6,10 +6,9 @@
 // 4. Pretvori svoj objekt u JSON string.
 // Kreiranje objekta koji predstavlja auto
 
-
 var auto = {
-  marka: "Toyota",
-  model: "Camry",
+  marka: "BMW",
+  model: "M5",
   godinaProizvodnje: 2022,
   trenutnaBrzina: 0,
 
