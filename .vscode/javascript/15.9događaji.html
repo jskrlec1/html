@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Događaji</title>
+  </head>
+  <body>
+    <!-- INLINE PRIMJER
+        <input type="button" onclick="klik()" value="Click" />
+    <div id="ispis"></div>
+    <script>
+      function klik() {
+     var x = document.getElementById("ispis");
+        x.textContent = "Kliknut sam!";   
+      }-->
+
+    <!-- SVOJSTVO NA ELEMENTU 
+    <input id="button" type="button" value="Click" />
+    <div id="ispis"></div>
+    <script>
+      var button = document.getElementById("button");
+      button.onclick = function () {
+        var x = document.getElementById("ispis");
+        x.textContent = "Kliknut sam!";
+      }; -->
+
+    <input id="button" type="button" value="Click" />
+    <div id="ispis"></div>
+    <script>
+      var button = document.getElementById("button");
+      function klik() {
+        var x = document.getElementById("ispis");
+        x.textContent = "Kliknut sam!";
+      }
+      button.addEventListener("click", klik);
+      // button.removeEventListener("click", klik);
+    </script>
+  </body>
+</html>
+

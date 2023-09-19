@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacija boje</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: red; /* Početna boja pozadine */
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var bodyElement = document.body;
+      var marginValue = 0;
+      var increasing = true;
+      var backgroundColor = 0;
+      var colorIncreasing = true;
+
+      function animateColor() {
+        // Animacija boje pozadine
+        if (colorIncreasing) {
+          backgroundColor++;
+        } else {
+          backgroundColor--;
+        }
+
+        if (backgroundColor === 255) {
+          colorIncreasing = false;
+        } else if (backgroundColor === 0) {
+          colorIncreasing = true;
+        }
+
+        bodyElement.style.backgroundColor =
+          "rgb(" + backgroundColor + ", 0, 0)";
+
+        requestAnimationFrame(animateColor);
+      }
+
+      animateColor();
+    </script>
+  </body>
+</html>
