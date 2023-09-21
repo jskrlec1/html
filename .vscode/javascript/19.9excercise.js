@@ -1,4 +1,4 @@
-var Exercise = (function () {
+var Excercise = (function () {
   var steps = 0;
   function increaseSteps() {
     steps++;
@@ -20,4 +20,4 @@ var Exercise = (function () {
   };
 })();
 
-module.exports = Exercise;
+module.exports = Excercise;
