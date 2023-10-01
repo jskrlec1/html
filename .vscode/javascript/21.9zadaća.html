@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter Characters</title>
+    <link rel="stylesheet" href="21.9zadaća.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style></style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Harry Potter Characters</h1>
+      <button id="fetchButton">Dohvati podatke</button>
+    </div>
+
+    <table id="responseTable" border="1">
+      <thead>
+        <tr>
+          <th>Klan</th>
+          <th>Ime</th>
+          <th>Alternativna imena</th>
+          <th>Glumac</th>
+          <th>Slika</th>
+          <th>Godina rođenja</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Prikaz podataka -->
+      </tbody>
+    </table>
+
+    <script>
+      var bodyElement = document.body;
+      var increasing = true;
+      var backgroundColor = 0;
+      var colorIncreasing = true;
+
+      function animateColor() {
+        if (colorIncreasing) {
+          backgroundColor++;
+        } else {
+          backgroundColor--;
+        }
+
+        if (backgroundColor === 255) {
+          colorIncreasing = false;
+        } else if (backgroundColor === 200) {
+          fetchData();
+        } else {
+          bodyElement.style.backgroundColor =
+            "rgb(" + backgroundColor + ", 0, 0)";
+          setTimeout(animateColor, 15);
+        }
+      }
+
+      function fetchData() {
+        var request = new XMLHttpRequest();
+        request.open("GET", "https://hp-api.onrender.com/api/characters", true);
+
+        request.onload = function () {
+          if (request.status === 200) {
+            var responseData = JSON.parse(request.responseText);
+            var tableBody = document
+              .getElementById("responseTable")
+              .getElementsByTagName("tbody")[0];
+
+            for (var i = 0; i < responseData.length && i < 25; i++) {
+              var row = tableBody.insertRow(i);
+
+              var houseCell = row.insertCell(0);
+              var nameCell = row.insertCell(1);
+              var alternateNamesCell = row.insertCell(2);
+              var actorCell = row.insertCell(3);
+              var imageCell = row.insertCell(4);
+              var birthYearCell = row.insertCell(5);
+
+              houseCell.innerHTML = responseData[i].house;
+              nameCell.innerHTML = responseData[i].name;
+              alternateNamesCell.innerHTML =
+                responseData[i].alternate_names.join(", ");
+              actorCell.innerHTML = responseData[i].actor;
+              imageCell.innerHTML = `<img src="${responseData[i].image}" alt="${responseData[i].name}">`;
+              birthYearCell.innerHTML = responseData[i].yearOfBirth;
+            }
+          } else {
+            console.error("Greška " + request.status);
+          }
+        };
+
+        request.send();
+      }
+
+      var fetchButton = document.getElementById("fetchButton");
+
+      fetchButton.addEventListener("click", function () {
+        animateColor();
+      });
+    </script>
+  </body>
+</html>

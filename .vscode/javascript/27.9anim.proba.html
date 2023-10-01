@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacija1</title>
+    <style>
+      .box {
+        border: 3px solid black;
+        width: 250px;
+        height: 250px;
+        background-color: red;
+        font-size: 50px;
+        text-align: center;
+        line-height: 250px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">KUTIJA 1</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+    <script>
+      var loopBegan = 0;
+      var loopCompleted = 0;
+
+      anime({
+        targets: ".box",
+        translateX: 100,
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+        loopBegin: function (anim) {
+          loopBegan++;
+          console.log("loop began : " + loopBegan);
+        },
+        loopComplete: function (anim) {
+          loopCompleted++;
+          console.log("loop completed : " + loopCompleted);
+        },
+      });
+
+      // Dodajte još jednu kutiju koja će se kretati s desna na lijevo
+      var rightBox = document.createElement("div");
+      rightBox.className = "box right";
+      rightBox.textContent = "KUTIJA2";
+      document.body.appendChild(rightBox);
+
+      anime({
+        targets: ".box.right",
+        translateX: 1100,
+        translateY: 500, // Pomicanje s desna na lijevo
+        duration: 2000, // Trajanje animacije u milisekundama
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+      });
+
+      // Dodajte treću kutiju koja će se kretati po Y osi
+      var bottomBox = document.createElement("div");
+      bottomBox.className = "box bottom";
+      bottomBox.textContent = "KUTIJA3";
+      document.body.appendChild(bottomBox);
+
+      anime({
+        targets: ".box.bottom",
+        translateX: 2200,
+        translateY: 1000, // Pomicanje odozdo prema gore
+        duration: 2000, // Trajanje animacije u milisekundama
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+      });
+
+      // Dodajte četvrtu kutiju koja će se kretati iz gornjeg desnog u donji lijevi kut i nazad
+      var topRightBox = document.createElement("div");
+      topRightBox.className = "box top-right";
+      topRightBox.textContent = "KUTIJA4";
+      document.body.appendChild(topRightBox);
+
+      // Postavite početnu poziciju četvrte kutije u gornji desni kut
+      topRightBox.style.top = "0,1";
+      topRightBox.style.right = "0";
+      anime({
+        targets: ".box.top-right",
+        translateX: -100,
+        // Pomicanje odozdo prema gore
+        duration: 2000, // Trajanje animacije u milisekundama
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+      });
+      var topRightBox = document.createElement("div");
+      topRightBox.className = "box top-right2";
+      topRightBox.textContent = "KUTIJA5";
+      document.body.appendChild(topRightBox);
+      topRightBox.style.top = "0,1";
+      topRightBox.style.right = "0";
+      anime({
+        targets: ".box.top-right2",
+        translateX: -1200,
+        translateY: 1000, // Pomicanje odozdo prema gore
+        duration: 2000, // Trajanje animacije u milisekundama
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+      });
+      var topRightBox = document.createElement("div");
+      topRightBox.className = "box top-right3";
+      topRightBox.textContent = "KUTIJA6";
+      document.body.appendChild(topRightBox);
+      topRightBox.style.top = "0,1";
+      topRightBox.style.right = "0";
+      anime({
+        targets: ".box.top-right3",
+        translateX: -2200,
+        translateY: 1000, // Pomicanje odozdo prema gore
+        duration: 2000, // Trajanje animacije u milisekundama
+        loop: true,
+        direction: "alternate",
+        easing: "easeInOutCirc",
+      });
+    </script>
+  </body>
+</html>

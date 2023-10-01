@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animirana kocka</title>
+    <style>
+      #kocka {
+        width: 100px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kocka"></div>
+    <script>
+      const kocka = document.getElementById("kocka");
+
+      let pozicijaX = 0;
+      let pozicijaY = 0;
+
+      function animirajKocku() {
+        if (pozicijaX < window.innerWidth - 100) {
+          pozicijaX += 5;
+          kocka.style.left = pozicijaX + "px";
+          kocka.style.top = pozicijaY + "px";
+          requestAnimationFrame(animirajKocku);
+        } else {
+          pozicijaX = -100;
+          kocka.style.left = pozicijaX + "px";
+
+          pozicijaY += 200;
+          kocka.style.top = pozicijaY + "px";
+
+          animirajKocku();
+        }
+      }
+
+      animirajKocku();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 56px;
+  text-align: center;
+}
+
+table {
+  font-size: 26px;
+  font-family: "Old Standard TT", serif;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+table,
+th,
+td {
+  border: 3px solid black;
+}
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+button#fetchButton {
+  font-size: 18px;
+  padding: 10px 150px;
+  background-color: #f60a0a;
+  color: white;
+  margin-bottom: 20px;
+}

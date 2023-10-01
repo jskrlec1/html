@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animacija3</title>
+    <style>
+      body {
+        background-color: rgb(184, 6, 6);
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .box {
+        width: auto;
+        height: 250px;
+        text-shadow: 16px 6px 6px #181616;
+        font-size: 150px;
+        color: rgb(126, 246, 6);
+        text-align: center;
+        line-height: 250px;
+        position: absolute;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">E</div>
+    <div class="box">V</div>
+    <div class="box">O</div>
+    <div class="box">G</div>
+    <div class="box">A</div>
+    <div class="box">R</div>
+    <div class="box">A</div>
+    <div class="box">D</div>
+    <div class="box">I</div>
+    <div class="box">!</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+    <script>
+      function animateBox(box, translateX, translateY) {
+        anime({
+          targets: box,
+          opacity: 1,
+          translateX: translateX,
+          translateY: translateY,
+          rotate: {
+            value: "360deg",
+            duration: 2000,
+            easing: "linear",
+          },
+          duration: 5000,
+          loop: true,
+          direction: "alternate",
+        });
+      }
+
+      var boxes = document.querySelectorAll(".box");
+      var positions = [
+        { translateX: 100, translateY: 100 },
+        { translateX: 300, translateY: 100 },
+        { translateX: 500, translateY: 100 },
+        { translateX: 900, translateY: 400 },
+        { translateX: 1100, translateY: 400 },
+        { translateX: 1500, translateY: 700 },
+        { translateX: 1700, translateY: 700 },
+        { translateX: 1900, translateY: 700 },
+        { translateX: 2100, translateY: 700 },
+        { translateX: 2400, translateY: 700 },
+      ];
+
+      for (var i = 0; i < boxes.length; i++) {
+        animateBox(boxes[i], positions[i].translateX, positions[i].translateY);
+      }
+    </script>
+  </body>
+</html>

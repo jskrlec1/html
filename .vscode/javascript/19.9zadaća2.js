@@ -33,29 +33,30 @@ console.log(i);
 // 1.
 "use strict"; // Postavljanje "use strict" direktive na početak skripte za strožu kontrolu
 
-//a = 78; // Ovo će izazvati ReferenceError jer a nije deklarirana varijabla
-var b = 34; // Ispravljeno u 34 (decimalna vrijednost)
+let a = 78; // Ovo će izazvati ReferenceError jer a nije deklarirana varijabla
+let b = 34; // Ispravljeno u 34 (decimalna vrijednost)
 //delete a; // Ovo će izazvati ReferenceError jer a nije deklarirana varijabla
-delete window.b; // Ovo će izbrisati globalnu varijablu b
-
-var myObject = { property1: 1, property2: 2, property1: 1 }; // Ispravljeno dodavanje svojstava u objekt
+//delete window.b; // Ovo će izbrisati globalnu varijablu b
+a = null;
+var myObject = { property1: 1, property2: 2, property3: 1 }; // Ispravljeno dodavanje svojstava u objekt
 
 // 2.
 const users = [
-  { name: 'Fabio', surname: 'Biondi' },
-  { name: 'Mario', surname: 'Rossi' },
+  { name: "Fabio", surname: "Biondi" },
+  { name: "Mario", surname: "Rossi" },
 ];
 
-const user = { name: 'Lorenzo', surname: 'Verdi' };
+const user = { name: "Lorenzo", surname: "Verdi" };
 
 const updatedUsers = [...users, user]; // Dodavanje novog korisnika u polje koristeći spread operator
 
 console.log(updatedUsers);
 
 // 3.
-for (var i = 0; i < 10; i++) { // Promijenjeno let u var
-  setTimeout(function() {
-    console.log('Broj je ' + i);
+for (var i = 0; i < 10; i++) {
+  // Promijenjeno let u var
+  setTimeout(function () {
+    console.log("Broj je " + i);
   }, 1000);
 }
 
