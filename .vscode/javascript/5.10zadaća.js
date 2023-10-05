@@ -42,7 +42,8 @@ function najduzaRijec(rijeciNiz) {
 var najduzaRijecIzNiza = najduzaRijec(rijeci);
 console.log("Najduža riječ u nizu je: " + najduzaRijecIzNiza);
 
-// Zad3: isto kao 2 samo najkraću riječ
+// Zad3: isto kao 2 samo najkraću riječ:
+
 var rijeci = [
   "quickest",
   "brown",
