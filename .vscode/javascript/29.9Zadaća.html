@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app_Josip</title>
+    <link rel="stylesheet" href="29.9Zadaća.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Zadatci</h1>
+        <input
+          id="todoInput"
+          name="todo"
+          placeholder="dodaj zadatak"
+          autofocus
+        />
+        <button class="addButton">Dodaj</button>
+      </header>
+      <br />
+      <main>
+        <table border="1" class="todoTable">
+          <thead>
+            <tr>
+              <th>IZVRŠENO</th>
+              <th>ZADATAK</th>
+              <th>BRISANJE</th>
+            </tr>
+          </thead>
+          <tbody class="todoList"></tbody>
+        </table>
+        <br />
+        <button class="clearButton">Obriši sve</button>
+        <button class="clearCheckedButton">Obriši označeno</button>
+      </main>
+    </div>
+    <script src="29.9Zadaća.js"></script>
+  </body>
+</html>
