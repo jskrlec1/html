@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS ispit</title>
+    <style>
+      body {
+        background-color: cyan;
+        display: none;
+      }
+
+      #loader {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+      }
+      #loader img {
+        width: 50px;
+        height: 20px;
+      }
+
+      th {
+        background-color: rgb(131, 228, 245);
+      }
+      td {
+        background-color: rgb(247, 182, 182);
+        text-align: center;
+        vertical-align: middle;
+      }
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        text-decoration: underline 3px rgb(246, 89, 89);
+      }
+
+      #results {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+      }
+      #noResults {
+        display: none;
+        text-align: center;
+        font-size: 50px;
+        color: red;
+        margin-top: 20px;
+      }
+
+      #searchInput {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        background-color: aqua;
+
+        width: 300px;
+        height: 40px;
+        font-size: 18px;
+        padding: 5px;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+        background-color: rgb(239, 137, 137);
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <img
+        src="https://cdn.dribbble.com/users/1018473/screenshots/3963419/attachments/905536/loader-v1.mp4"
+        alt="Loading..."
+      />
+    </div>
+
+    <h1>TVmaze Search App</h1>
+    <input type="text" id="searchInput" placeholder="Unesite pretragu" />
+    <br />
+    <button onclick="search()">Traži</button>
+    <br /><br />
+    <div id="results">
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Slika-poster</th>
+            <th>Ime serije</th>
+            <th>Prosječni rating</th>
+            <th>Žanrovi</th>
+            <th>Opis</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div id="noResults" style="display: none">
+      <p>Nema rezultata za traženi termin.</p>
+    </div>
+
+    <script>
+      function showMainContent() {
+        document.body.style.display = "block";
+        document.getElementById("loader").style.display = "none";
+      }
+
+      window.addEventListener("load", showMainContent);
+
+      function search() {
+        const searchTerm = document.getElementById("searchInput").value;
+
+        document.getElementById("loader").style.display = "block";
+
+        document.getElementById("tableBody").innerHTML = "";
+        document.getElementById("noResults").style.display = "none";
+
+        var request = new XMLHttpRequest();
+        request.open(
+          "GET",
+          "https://api.tvmaze.com/search/shows?q=" + searchTerm,
+          true
+        );
+
+        request.onload = function () {
+          document.getElementById("loader").style.display = "none";
+
+          if (request.status === 200) {
+            const data = JSON.parse(request.responseText);
+
+            if (data.length === 0) {
+              document.getElementById("noResults").style.display = "block";
+            } else {
+              data.forEach(async (show) => {
+                const row = document.createElement("tr");
+                const imageCell = document.createElement("td");
+                const nameCell = document.createElement("td");
+                const ratingCell = document.createElement("td");
+                const genresCell = document.createElement("td");
+                const summaryCell = document.createElement("td");
+
+                nameCell.textContent = show.show.name;
+
+                ratingCell.textContent =
+                  show.show.rating && show.show.rating.average
+                    ? show.show.rating.average
+                    : "N/A";
+
+                genresCell.textContent = show.show.genres.join(", ");
+
+                const descriptionText = show.show.summary
+                  .replace(/<p>/g, "")
+                  .replace(/<\/p>/g, "");
+                summaryCell.innerHTML = descriptionText;
+
+                imageCell.innerHTML = `<img src="${show.show.image.medium}" alt="${show.show.name}" />`;
+
+                row.appendChild(imageCell);
+                row.appendChild(nameCell);
+                row.appendChild(ratingCell);
+                row.appendChild(genresCell);
+                row.appendChild(summaryCell);
+
+                document.getElementById("tableBody").appendChild(row);
+              });
+            }
+          }
+        };
+
+        request.send();
+      }
+    </script>
+  </body>
+</html>
